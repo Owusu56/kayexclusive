@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="#D8E4EB" />
+    <corners android:radius="50dp" />
+    <gradient android:gradientRadius="@dimen/material_emphasis_medium" android:startColor="#81C7E6" android:endColor="@color/cardview_light_background"/>
+
+</shape>
