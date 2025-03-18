@@ -10,11 +10,18 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.example.kayexclusive.FirstFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <ScrollView
         android:id="@+id/scrollView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:background="#006CDBE9"
+        android:onClick="register"
         android:paddingLeft="10dp"
         android:paddingTop="50dp"
         android:paddingRight="10dp"
@@ -53,11 +60,36 @@
                 app:startIconTint="#2B1010">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background"
                     android:gravity="center"
                     android:hint="Name"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="#00833939"
+                android:padding="10dp"
+                app:boxBackgroundColor="#FDFAFA"
+                app:boxBackgroundMode="outline"
+                app:boxCollapsedPaddingTop="100dp"
+                app:boxCornerRadiusBottomEnd="10dp"
+                app:startIconDrawable="@drawable/baseline_account_circle_24"
+                app:startIconTint="#2B1010">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background"
+                    android:gravity="center"
+                    android:hint="Email"
                     android:textSize="20sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -72,35 +104,12 @@
                 app:startIconTint="#2B1010">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background"
                     android:gravity="center"
-                    android:hint="Email"
-                    android:textSize="20sp" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="10dp"
-                android:background="#02FAF7F7"
-                android:enabled="false"
-                android:padding="10dp"
-                app:endIconCheckable="true"
-                app:endIconDrawable="@drawable/baseline_visibility_off_24"
-                app:endIconMode="password_toggle"
-                app:endIconTint="#1B1010"
-                app:startIconDrawable="@drawable/baseline_lock_24"
-                app:startIconTint="#2B1010">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/background"
-                    android:gravity="center"
-                    android:hint="Password"
+                    android:hint="Pass"
                     android:textSize="20sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -118,6 +127,7 @@
                 app:startIconTint="#2B1010">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/background"
@@ -128,10 +138,18 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/sign"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick="Register"
                 android:text="Sign Up" />
+
+            <Button
+                android:id="@+id/SignIn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="SignIn"
+                android:text="Sign In" />
 
         </LinearLayout>
     </ScrollView>
